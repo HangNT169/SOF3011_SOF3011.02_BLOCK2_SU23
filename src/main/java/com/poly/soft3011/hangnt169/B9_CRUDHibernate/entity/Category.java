@@ -26,31 +26,7 @@ import java.util.List;
 @Setter
 @ToString
 public class Category {
-    /**
-     * Java 3: JDBC => Truy van tren SQL
-     * Java 4: Hibernate
-     *  => Truy van tren HQL(Hibernate Query Language)
-     *  => Tuc la se truy van truc tiep tren thuc the (entity)
-     * Java 5: JPA
-     *  => JPQL
-     *  ORM(Object Relationship Mapping)
-     *  varchar/nvarchar => String
-     *  int => int /Integer
-     *  float => float / Float
-     *  bit => boolean /Boolean
-     *  bigint => long/Long
-     *  uniqueidentifier => String/UUID => tu gen newID()
-     *  ...
-     *  1 cột SQL(table)
-     *      + khoá chính
-     *      + khoá ngoại
-     *      + column bình thường
-     *   Quan hệ 2 bảng
-     *      - 1 - 1(One to One)
-     *      - 1 - N(One to Many)
-     *      - N - 1(Many to One)
-     *      - N - N(Many to Many)
-     */
+
     // Khoa chinh
     @Id
     @Column(name = "id")
@@ -64,6 +40,31 @@ public class Category {
     @Column(name = "category_name")
     private String categoryName;
 
+}
 //    @OneToMany
 //    private List<Product>products;
-}
+/**
+ * Java 3: JDBC => Truy van tren SQL
+ * Java 4: Hibernate
+ *  => Truy van tren HQL(Hibernate Query Language)
+ *  => Tuc la se truy van truc tiep tren thuc the (entity)
+ * Java 5: JPA
+ *  => JPQL
+ *  ORM(Object Relationship Mapping)
+ *  varchar/nvarchar => String
+ *  int => int /Integer
+ *  float => float / Float
+ *  bit => boolean /Boolean
+ *  bigint => long/Long
+ *  uniqueidentifier => String/UUID => tu gen newID()
+ *  ...
+ *  1 cột SQL(table)
+ *      + khoá chính
+ *      + khoá ngoại
+ *      + column bình thường
+ *   Quan hệ 2 bảng
+ *      - 1 - 1(One to One)
+ *      - 1 - N(One to Many)
+ *      - N - 1(Many to One)
+ *      - N - N(Many to Many)
+ */
